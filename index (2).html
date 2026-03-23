@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sophia Amelia | Ecommerce Growth Expert</title>
+<meta name="description" content="I help Etsy, Shopify and online store owners turn low sales into steady growing income. Submit your store for a free audit today."/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',sans-serif;background:#faf9f7;color:#1a1a1a;line-height:1.7}
+  .site{max-width:780px;margin:0 auto;padding:0 1.25rem}
+
+  nav{background:#fff;border-bottom:1px solid #e8e2d9;padding:1rem 0;position:sticky;top:0;z-index:100}
+  .nav-inner{max-width:780px;margin:0 auto;padding:0 1.25rem;display:flex;justify-content:space-between;align-items:center}
+  .logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#1a1a1a}
+  .logo span{color:#c87941}
+  .nav-cta{background:#c87941;color:#fff;border:none;padding:9px 20px;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;text-decoration:none}
+
+  .hero{padding:4rem 0 3rem;text-align:center}
+  .hero-badge{display:inline-block;background:#fdf0e6;color:#c87941;font-size:12px;font-weight:500;padding:5px 14px;border-radius:20px;margin-bottom:1.25rem;border:1px solid #f0d8c0}
+  .hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,44px);font-weight:700;line-height:1.2;color:#1a1a1a;margin-bottom:1.25rem;max-width:600px;margin-left:auto;margin-right:auto}
+  .hero h1 em{color:#c87941;font-style:normal}
+  .hero p{font-size:16px;color:#555;max-width:500px;margin:0 auto 2rem;font-weight:300;line-height:1.8}
+
+  .audit-form{background:#fff;border:1px solid #e8e2d9;border-radius:12px;padding:1.75rem;max-width:480px;margin:0 auto;box-shadow:0 4px 24px rgba(0,0,0,0.07)}
+  .audit-form h3{font-size:15px;font-weight:500;margin-bottom:1rem;color:#1a1a1a}
+  .form-row{display:flex;flex-direction:column;gap:10px;margin-bottom:12px}
+  .form-row input,.form-row select{width:100%;padding:11px 14px;border:1px solid #ddd;border-radius:7px;font-size:14px;font-family:'DM Sans',sans-serif;color:#1a1a1a;background:#faf9f7;outline:none;transition:border 0.2s}
+  .form-row input:focus,.form-row select:focus{border-color:#c87941}
+  .form-submit{width:100%;background:#c87941;color:#fff;border:none;padding:13px;border-radius:7px;font-size:15px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:4px;transition:background 0.2s}
+  .form-submit:hover{background:#b06835}
+  .form-note{font-size:12px;color:#888;text-align:center;margin-top:8px}
+  .success-msg{display:none;background:#eaf3de;border:1px solid #97c459;border-radius:8px;padding:1rem;text-align:center;margin-top:10px;font-size:14px;color:#3b6d11}
+
+  .trust-bar{padding:1.5rem 0;border-top:1px solid #e8e2d9;border-bottom:1px solid #e8e2d9;background:#fff;margin:2.5rem 0}
+  .trust-inner{max-width:780px;margin:0 auto;padding:0 1.25rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;align-items:center}
+  .trust-item{font-size:13px;color:#888;display:flex;align-items:center;gap:6px}
+  .trust-dot{width:6px;height:6px;border-radius:50%;background:#c87941;display:inline-block}
+
+  .section-label{font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:#c87941;margin-bottom:0.75rem}
+  .section-title{font-family:'Playfair Display',serif;font-size:clamp(22px,4vw,32px);font-weight:700;color:#1a1a1a;margin-bottom:1.5rem;line-height:1.3}
+
+  .problem{padding:3rem 0}
+  .pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:1.5rem}
+  .pain-card{background:#fff;border:1px solid #e8e2d9;border-radius:10px;padding:1rem 1.25rem}
+  .pain-icon{font-size:22px;margin-bottom:8px}
+  .pain-card p{font-size:14px;color:#555;line-height:1.6}
+
+  .services{padding:3rem 0}
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:1.5rem}
+  .service-card{background:#fff;border:1px solid #e8e2d9;border-radius:10px;padding:1.25rem}
+  .service-card.featured{border:2px solid #c87941}
+  .service-name{font-size:15px;font-weight:500;color:#1a1a1a;margin-bottom:4px}
+  .service-desc{font-size:13px;color:#666;line-height:1.6;margin-bottom:10px}
+  .service-price{font-size:13px;font-weight:500;color:#c87941}
+  .free-badge{display:inline-block;background:#fdf0e6;color:#c87941;font-size:11px;padding:3px 10px;border-radius:10px;margin-bottom:8px;border:1px solid #f0d8c0}
+
+  .how{padding:3rem 0}
+  .steps{display:flex;flex-direction:column;gap:0;margin-top:1.5rem}
+  .step{display:flex;gap:1.25rem;align-items:flex-start;padding:1.1rem 0}
+  .step:not(:last-child){border-bottom:1px solid #e8e2d9}
+  .step-num{min-width:32px;height:32px;border-radius:50%;background:#fdf0e6;border:1px solid #f0d8c0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:#c87941;flex-shrink:0}
+  .step-text h4{font-size:15px;font-weight:500;color:#1a1a1a;margin-bottom:3px}
+  .step-text p{font-size:13px;color:#666;line-height:1.6}
+
+  .about{padding:2.5rem 1.5rem;background:#fff;margin:2rem 0;border-radius:12px;border:1px solid #e8e2d9}
+  .about-avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#c87941,#e8a87c);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:22px;color:#fff;margin-bottom:1rem}
+  .about p{font-size:15px;color:#555;line-height:1.8;margin-bottom:1rem}
+  .about-points{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:0.5rem}
+  .about-points li{font-size:14px;color:#555;display:flex;align-items:center;gap:8px}
+  .check{width:18px;height:18px;border-radius:50%;background:#fdf0e6;display:inline-flex;align-items:center;justify-content:center;font-size:10px;color:#c87941;flex-shrink:0;border:1px solid #f0d8c0}
+
+  .testimonials{padding:3rem 0}
+  .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:1.5rem}
+  .testi-card{background:#fff;border:1px solid #e8e2d9;border-radius:10px;padding:1.25rem}
+  .stars{color:#c87941;font-size:16px;margin-bottom:8px;letter-spacing:2px}
+  .testi-text{font-size:13px;color:#555;line-height:1.7;margin-bottom:10px;font-style:italic}
+  .testi-name{font-size:13px;font-weight:500;color:#1a1a1a}
+  .testi-role{font-size:11px;color:#888}
+
+  .faq{padding:3rem 0}
+  .faq-list{display:flex;flex-direction:column;gap:0;margin-top:1.5rem}
+  .faq-item{border-bottom:1px solid #e8e2d9;padding:1.1rem 0}
+  .faq-q{font-size:15px;font-weight:500;color:#1a1a1a;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+  .faq-a{font-size:14px;color:#666;line-height:1.7;margin-top:8px;display:block}
+  .faq-arrow{display:none}
+
+  .cta-section{background:#1a1a1a;border-radius:12px;padding:2.5rem 1.5rem;text-align:center;margin:2rem 0}
+  .cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(20px,4vw,28px);color:#fff;margin-bottom:0.75rem;line-height:1.3}
+  .cta-section p{font-size:15px;color:#aaa;margin-bottom:1.5rem}
+  .cta-btn{background:#c87941;color:#fff;border:none;padding:14px 32px;border-radius:8px;font-size:15px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background 0.2s}
+  .cta-btn:hover{background:#b06835}
+
+  .footer{text-align:center;padding:2rem 0;border-top:1px solid #e8e2d9;margin-top:1rem}
+  .footer p{font-size:13px;color:#888}
+  .footer a{color:#c87941;text-decoration:none}
+
+  @media(max-width:500px){
+    .trust-inner{gap:1rem}
+    .hero{padding:2.5rem 0 2rem}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">Sophia <span>Amelia</span></div>
+    <a class="nav-cta" href="https://tally.so/r/kdZPRo" target="_blank">Get free audit</a>
+  </div>
+</nav>
+
+<div class="site">
+
+  <div class="hero">
+    <div class="hero-badge">Ecommerce Growth Expert</div>
+    <h1>Your store deserves more than <em>empty traffic</em></h1>
+    <p>I help Etsy, Shopify, and online store owners turn low sales into steady, growing income — no jargon, no fluff, just results.</p>
+
+    <div class="audit-form" id="audit">
+      <h3>Submit your store for a free audit</h3>
+      <p style="font-size:14px;color:#555;margin-bottom:1.25rem;line-height:1.7">Tell me about your store and I'll send you a personal written audit within 48 hours — completely free, no strings attached.</p>
+      <a href="https://tally.so/r/kdZPRo" target="_blank" style="display:block;width:100%;background:#c87941;color:#fff;text-decoration:none;padding:14px;border-radius:7px;font-size:15px;font-weight:500;text-align:center;font-family:'DM Sans',sans-serif;transition:background 0.2s">Yes, audit my store for free →</a>
+      <p class="form-note">No cost. No strings. Honest feedback within 48 hours.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="trust-bar">
+  <div class="trust-inner">
+    <span class="trust-item"><span class="trust-dot"></span> Etsy sellers</span>
+    <span class="trust-item"><span class="trust-dot"></span> Shopify stores</span>
+    <span class="trust-item"><span class="trust-dot"></span> Print on demand</span>
+    <span class="trust-item"><span class="trust-dot"></span> Handmade goods</span>
+    <span class="trust-item"><span class="trust-dot"></span> Digital products</span>
+  </div>
+</div>
+
+<div class="site">
+
+  <div class="problem">
+    <div class="section-label">Sound familiar?</div>
+    <div class="section-title">You're working hard — but sales aren't showing up</div>
+    <div class="pain-grid">
+      <div class="pain-card"><div class="pain-icon">😩</div><p>You get visitors but barely anyone buys</p></div>
+      <div class="pain-card"><div class="pain-icon">🔍</div><p>Your listings get lost in search results</p></div>
+      <div class="pain-card"><div class="pain-icon">📉</div><p>You don't know what's holding you back</p></div>
+      <div class="pain-card"><div class="pain-icon">😔</div><p>You've tried things but nothing sticks</p></div>
+    </div>
+    <p style="margin-top:1.5rem;font-size:15px;color:#555;line-height:1.8">These are all fixable problems — and they're more common than you think. Most small store owners are just a few strategic changes away from real traction.</p>
+  </div>
+
+  <div class="services">
+    <div class="section-label">How I help</div>
+    <div class="section-title">Services built for small store owners</div>
+    <div class="services-grid">
+      <div class="service-card featured">
+        <div class="free-badge">Free to start</div>
+        <div class="service-name">Store Audit</div>
+        <div class="service-desc">A full written review of your store — listings, SEO, pricing, and design — with clear action steps you can use immediately.</div>
+        <div class="service-price">Free &rarr; then from $47</div>
+      </div>
+      <div class="service-card">
+        <div class="service-name">Growth Strategy</div>
+        <div class="service-desc">A personalized email-based roadmap covering traffic, conversions, and repeat buyers tailored to your store.</div>
+        <div class="service-price">From $97</div>
+      </div>
+      <div class="service-card">
+        <div class="service-name">Product &amp; Listing Optimization</div>
+        <div class="service-desc">Rewrite and reposition your listings to rank better and convert more browsers into paying customers.</div>
+        <div class="service-price">From $67</div>
+      </div>
+      <div class="service-card">
+        <div class="service-name">Full Store Makeover</div>
+        <div class="service-desc">Complete overhaul — listings, branding, SEO, marketing plan, and brand building for long-term growth.</div>
+        <div class="service-price">From $297</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="how">
+    <div class="section-label">The process</div>
+    <div class="section-title">How it works</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text"><h4>Submit your store</h4><p>Fill in the form above with your store link — takes under 2 minutes, completely free.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text"><h4>Receive your free audit</h4><p>Within 48 hours, you'll get a written breakdown of what's working, what's not, and exactly what to fix first.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text"><h4>Choose your next step</h4><p>No pressure at all. If you want to go deeper, we continue with a paid service. If not, the audit is yours to keep and use.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text"><h4>Start making more sales</h4><p>With a clear strategy in hand, you finally have a path forward that actually works for your store.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about">
+    <div class="section-label">About</div>
+    <div class="about-avatar">SA</div>
+    <div class="section-title" style="margin-bottom:1rem">Hi, I'm Sophia Amelia</div>
+    <p>I'm an ecommerce expert who specializes in helping small online store owners turn their passion into a profitable business. I've worked with sellers across Etsy, Shopify, WooCommerce, and print-on-demand platforms — in fashion, handmade goods, home products, and digital downloads.</p>
+    <p>I know exactly what it feels like to pour everything into a store and not see results. That's why everything I do is practical, personalized, and built around what actually moves the needle for small sellers.</p>
+    <ul class="about-points">
+      <li><span class="check">✓</span> Years of hands-on ecommerce experience</li>
+      <li><span class="check">✓</span> Specialized in small and micro stores</li>
+      <li><span class="check">✓</span> Fashion, handmade, POD, home goods and digital products</li>
+      <li><span class="check">✓</span> US, UK and global sellers welcome</li>
+    </ul>
+  </div>
+
+  <div class="testimonials">
+    <div class="section-label">Results</div>
+    <div class="section-title">What sellers are saying</div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-text">"Went from 3 sales a month to 47 in 6 weeks. The audit alone was worth everything."</div>
+        <div class="testi-name">Sarah K.</div>
+        <div class="testi-role">Etsy handmade seller, USA</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-text">"My Shopify revenue doubled after following the growth strategy. Clear, simple, and it works."</div>
+        <div class="testi-name">James O.</div>
+        <div class="testi-role">Shopify fashion store, UK</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-text">"Best investment I made for my POD store. Finally understand why people weren't buying."</div>
+        <div class="testi-name">Lisa M.</div>
+        <div class="testi-role">Print on demand seller, Canada</div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:#bbb;margin-top:1rem;text-align:center">Testimonials from early clients. Results may vary.</p>
+  </div>
+
+  <div class="faq">
+    <div class="section-label">Questions</div>
+    <div class="section-title">Frequently asked</div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Is the audit really free? <span class="faq-arrow">+</span></div>
+        <div class="faq-a">Yes, completely. You submit your store, I review it and send you a written breakdown within 48 hours at no cost and no obligation.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Do I need to be on a call or video chat? <span class="faq-arrow">+</span></div>
+        <div class="faq-a">No calls needed. Everything is handled by email — you get a full written audit and we communicate entirely through email at your own pace.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What platforms do you work with? <span class="faq-arrow">+</span></div>
+        <div class="faq-a">Etsy, Shopify, WooCommerce, Amazon, print-on-demand platforms (Printful, Printify, Redbubble), and most other ecommerce stores.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How quickly will I see results? <span class="faq-arrow">+</span></div>
+        <div class="faq-a">Most sellers start seeing improvements within 2 to 4 weeks of applying the changes. Results depend on your niche and how quickly you implement.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What if I have a very small or new store? <span class="faq-arrow">+</span></div>
+        <div class="faq-a">Perfect — small and new stores are exactly who I specialize in. The earlier you fix the foundations, the faster you grow.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-section">
+    <h2>Ready to finally see your store grow?</h2>
+    <p>Submit your store for a free audit. No calls, no pressure — just clear, honest feedback in your inbox within 48 hours.</p>
+    <button class="cta-btn" onclick="window.open('https://tally.so/r/kdZPRo','_blank')">Get my free store audit</button>
+  </div>
+
+  <div class="footer">
+    <p>© 2026 Sophia Amelia &nbsp;·&nbsp; Ecommerce Growth Expert &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection#cbb8a4bba3a2aaf3f3aaa6aea7a2aa8baca6aaa2a7e5a8a4a6"><span class="__cf_email__" data-cfemail="ddaeb2adb5b4bce5e5bcb0b8b1b4bc9dbab0bcb4b1f3beb2b0">[email&#160;protected]</span></a></p>
+  </div>
+
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function submitAudit(){
+  var name=document.getElementById('fname').value.trim();
+  var email=document.getElementById('femail').value.trim();
+  var store=document.getElementById('fstore').value.trim();
+  var platform=document.getElementById('fplatform').value;
+  if(!name||!email||!store||!platform){alert('Please fill in all fields before submitting.');return;}
+  var body='Name: '+name+'\nEmail: '+email+'\nStore: '+store+'\nPlatform: '+platform+'\n\nPle
